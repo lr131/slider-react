@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import styled from 'styled-components';
 
+import Slider from './Slider'
+
 const Repair = styled.div`
 	color: #fff;
 	font-size: 40px;
@@ -26,24 +28,24 @@ const LightText = styled.div`
 `;
 
 const CallButton = styled.button`
-margin-top: 34px;
-width: 245px;
-height: 64px;
-background-color: #ffa14b;
-border-radius: 50px;
-border: none;
-color: #ffffff;
-font-size: 18px;
-font-weight: bold;
-line-height: 24px;
-`;
+	margin-top: 34px;
+	width: 245px;
+	height: 64px;
+	background-color: #ffa14b;
+	border-radius: 50px;
+	border: none;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	`;
 
 
 class Main extends React.Component {
 	render(){
 		return(
 				<Row>
-					<Col lg={5} lgOffset={1}>
+					<Col lg={5}>
 						<Repair> Качественный ремонт
 								<span>iphone за 35 минут и гарантия 1 год</span>
 						</Repair>
@@ -54,9 +56,8 @@ class Main extends React.Component {
 						<CallButton>Отправить заявку!
 						</CallButton>
 					</Col>
-					<Col lg={6}>
-						<Repair> в этом месте слайдер
-						</Repair>
+					<Col lg={6} lgOffset={1}>
+						<Slider />
 					</Col>
 				</Row>
 			)
